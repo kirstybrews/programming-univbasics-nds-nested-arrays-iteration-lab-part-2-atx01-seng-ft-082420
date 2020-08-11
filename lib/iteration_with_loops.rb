@@ -5,9 +5,12 @@ def find_min_in_nested_arrays(src)
   row_index = 0 
   while row_index < src.count do
     element_index = 0 
-    lowest_temperature = 0
-    while element_index < src[row_index].count do 
+    src.sort 
+    while element_index < src[row_index].count do
+      low_temperatures << src[row_index][0]
+      element_index += 1 
     end
+    row_index += 1 
   end
 
 end
